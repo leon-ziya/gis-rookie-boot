@@ -1,0 +1,18 @@
+## ide
+**/.idea
+*.iml
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock
+
+## build
+/build/
+
+jeecg-boot-module-demo
+
+rebel.xml
+
