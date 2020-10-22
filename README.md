@@ -1,4 +1,4 @@
-Terra-CCU-Web 管理系统
+gis-rookie-Web 管理系统
 ===============
 
 当前最新版本： 2.0.0
@@ -40,13 +40,13 @@ Terra-CCU-Web 管理系统
 ## 技术文档
 
 - 模块名称
-    - terra-ccu-boot: ccu-web父目录
+    - gis-rookie-boot: ccu-web父目录
     - jeecg-boot-base-common: 系统功能common模块
     - jeecg-boot-module-system: 系统功能模块
-    - terra-ccu-web-bootstarter: CCU-WEB启动配置模块
-    - terra-ccu-web-common: CCU 业务通用模块
-    - terra-ccu-web-admin: CCU 业务管理模块
-    - terra-ccu-web-api: CCU业务对外第三方API模块
+    - gis-rookie-web-bootstarter: CCU-WEB启动配置模块
+    - gis-rookie-web-common: CCU 业务通用模块
+    - gis-rookie-web-admin: CCU 业务管理模块
+    - gis-rookie-web-api: CCU业务对外第三方API模块
 
 - 初始化仓库配置
 ```xml
@@ -66,19 +66,19 @@ Terra-CCU-Web 管理系统
       tomcat:
         max-swallow-size: -1
       servlet:
-        context-path: /terra-ccu
+        context-path: /gis-rookie
     ```
     - vue.config.js  
     ```js
-    '/terra-ccu': {
+    '/gis-rookie': {
         target: 'http://localhost:8080', //请求本地 需要jeecg-boot后台项目
         ws: false,
         changeOrigin: true
-    },
+    }
     ```
     - public\index.html
     ```html
-    window._CONFIG['domianURL'] = 'http://127.0.0.1:8080/terra-ccu';
+    window._CONFIG['domianURL'] = 'http://127.0.0.1:8080/gis-rookie';
     ```
 
 - 初始化Swagger文档
@@ -124,19 +124,19 @@ Terra-CCU-Web 管理系统
 - 打包前工作
     - maven管理器中执行 jeecg-boot-parent / Lifecycle / install  
         - 开发过程中需要对已安装模块，需要clean
-    - 如需线上修改的配置文件，置于 terra-ccu-web-bootstarter 的 resources
+    - 如需线上修改的配置文件，置于 gis-rookie-web-bootstarter 的 resources
     
-- 打包: maven管理器中执行 terra-ccu-web-bootstarter / Lifecycle / install
+- 打包: maven管理器中执行 gis-rookie-web-bootstarter / Lifecycle / install
 
 - 打包文件输出 $project-root/build
 
 - 解压
 ```shell script
-# unzip terra-ccu-web-app.zip
+# unzip gis-rookie-web-app.zip
 ```
 
 - 手工运行
 ```shell script
-# cd terra-ccu-web-app
-# nohup java -jar terra-ccu-web-bootstarter-2.2.1.jar &
+# cd gis-rookie-web-app
+# nohup java -jar gis-rookie-web-bootstarter-2.2.1.jar &
 ```

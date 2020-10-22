@@ -4,7 +4,7 @@ server:
     max-swallow-size: -1
   servlet:
     # context-path: /jeecg-boot
-    context-path: /terra-ccu
+    context-path: /gis-rookie
   compression:
     enabled: true
     min-response-size: 1024
@@ -128,9 +128,9 @@ spring:
         connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       datasource:
         master:
-          url: jdbc:mysql://10.26.1.114:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-          username: airs
-          password: ccu#terra
+          url: jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+          username: root
+          password: jianglai
           driver-class-name: com.mysql.cj.jdbc.Driver
           # 多数据源配置
           #multi-datasource1:
@@ -141,7 +141,7 @@ spring:
   #redis 配置
   redis:
     database: 0
-    host: 10.26.1.114
+    host: 114.67.104.135
     lettuce:
       pool:
         max-active: 8   #最大连接数据库连接数,设 0 为没有限制
@@ -149,7 +149,7 @@ spring:
         max-wait: -1ms  #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
         min-idle: 0     #最小等待连接中的数量,设 0 为没有限制
       shutdown-timeout: 100ms
-    password: ''
+    password: '123456'
     port: 6379
 #mybatis plus 设置
 mybatis-plus:

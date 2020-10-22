@@ -54,7 +54,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * @Description: 底层共通业务API，提供其他独立模块调用
  * @Author: scott
- * @Date:2019-4-20 
+ * @Date:2019-4-20
  * @Version:V1.0
  */
 @Slf4j
@@ -136,7 +136,7 @@ public class SysBaseApiImpl implements ISysBaseAPI {
 		BeanUtils.copyProperties(sysUser, loginUser);
 		return loginUser;
 	}
-	
+
 	@Override
 	public LoginUser getUserById(String id) {
 		if(oConvertUtils.isEmpty(id)) {
@@ -469,7 +469,7 @@ public class SysBaseApiImpl implements ISysBaseAPI {
 			}
 		}
 		return DB_TYPE;
-		
+
 	}
 
 	@Override
@@ -734,6 +734,9 @@ public class SysBaseApiImpl implements ISysBaseAPI {
 		obj.put(WebsocketConst.MSG_CMD, cmd);
 		webSocket.sendMoreMessage(userIds, obj.toJSONString());
 	}
+
+	@Override
+	public void sendWebSocketBroadcastMsg(String cmd){ webSocket.sendAllMessage(cmd);}
 
 	@Override
 	public List<LoginUser> queryAllUserByIds(String[] userIds) {

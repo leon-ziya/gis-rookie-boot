@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>cn.edu.cuhk.airs</groupId>
-  <artifactId>terra-ccu-boot-parent</artifactId>
+  <groupId>cn.edu.lnnu</groupId>
+  <artifactId>gis-rookie-boot-parent</artifactId>
   <version>2.2.1</version>
   <packaging>pom</packaging>
 
@@ -15,11 +15,11 @@
 	<modules>
 		<module>jeecg-boot-base-common</module>
 		<module>jeecg-boot-module-system</module>
-		<module>terra-ccu-web-admin</module>
-        <module>terra-ccu-web-common</module>
-		<module>terra-ccu-web-api</module>
-        <module>terra-ccu-web-bootstarter</module>
-    </modules>
+		<module>gis-rookie-web-admin</module>
+        <module>gis-rookie-web-common</module>
+		<module>gis-rookie-web-api</module>
+        <module>gis-rookie-web-bootstarter</module>
+	</modules>
 
 	<distributionManagement>
 	  	<repository>
@@ -345,7 +345,7 @@
 		<dependencies>
 			<!-- jeecg-boot-base-common -->
 			<dependency>
-	    		<groupId>cn.edu.cuhk.airs</groupId>
+	    		<groupId>cn.edu.lnnu</groupId>
 	    		<artifactId>jeecg-boot-base-common</artifactId>
 	    		<version>${jeecgboot.version}</version>
 	    	</dependency>

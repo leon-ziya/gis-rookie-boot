@@ -5,8 +5,8 @@
 	<artifactId>jeecg-boot-module-system</artifactId>
 
 	<parent>
-		<groupId>cn.edu.cuhk.airs</groupId>
-		<artifactId>terra-ccu-boot-parent</artifactId>
+		<groupId>cn.edu.lnnu</groupId>
+		<artifactId>gis-rookie-boot-parent</artifactId>
 		<version>2.2.1</version>
 	</parent>
 
@@ -31,12 +31,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>cn.edu.cuhk.airs</groupId>
+			<groupId>cn.edu.lnnu</groupId>
 			<artifactId>jeecg-boot-base-common</artifactId>
+			<version>2.2.1</version>
 		</dependency>
 		<dependency>
-			<groupId>cn.edu.cuhk.airs</groupId>
-			<artifactId>terra-ccu-web-admin</artifactId>
+			<groupId>cn.edu.lnnu</groupId>
+			<artifactId>gis-rookie-web-admin</artifactId>
 			<version>2.2.1</version>
 		</dependency>
 

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @Description: 底层共通业务API，提供其他独立模块调用
  * @Author: scott
- * @Date:2019-4-20 
+ * @Date:2019-4-20
  * @Version:V1.0
  */
 public interface ISysBaseAPI {
@@ -26,21 +26,21 @@ public interface ISysBaseAPI {
 	 * @param operatetype 操作类型(1:添加;2:修改;3:删除;)
 	 */
 	void addLog(String LogContent, Integer logType, Integer operatetype);
-	
+
 	/**
 	  * 根据用户账号查询用户信息
 	 * @param username
 	 * @return
 	 */
 	public LoginUser getUserByName(String username);
-	
+
 	/**
 	  * 根据用户id查询用户信息
 	 * @param id
 	 * @return
 	 */
 	public LoginUser getUserById(String id);
-	
+
 	/**
 	 * 通过用户账号查询角色集合
 	 * @param username
@@ -65,10 +65,10 @@ public interface ISysBaseAPI {
 	/**
 	 * 获取当前数据库类型
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public String getDatabaseType() throws SQLException;
-	
+
 	/**
 	  * 获取数据字典
 	 * @param code
@@ -93,7 +93,7 @@ public interface ISysBaseAPI {
 	 * @return
 	 */
     List<DictModel> queryTableDictItemsByCode(String table, String text, String code);
-    
+
     /**
    	 * 查询所有部门 作为字典信息 id -->value,departName -->text
    	 * @return
@@ -313,6 +313,12 @@ public interface ISysBaseAPI {
 	 * @param cmd
 	 */
 	public void sendWebSocketMsg(String[] userIds, String cmd);
+
+	/**
+	 * 发送广播消息
+	 * @param cmd
+	 */
+	public void sendWebSocketBroadcastMsg(String cmd);
 
 	/**
 	 * 根据id获取所有参与用户
