@@ -20,5 +20,6 @@ public interface BusinessConstant {
 	 */
 	String WEBSOCKET_TOPIC_POSITION_VEHICLE_POSITION = "VehiclePosition";
 
+	String WEBSOCKET_TOPIC_POSITION_VEHICLE_CLASSIFICATION_POSITION = "ClassificationPoints";
 
 }
